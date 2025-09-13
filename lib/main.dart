@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'features/scanner/presentation/scanner_page.dart';
 import 'features/history/presentation/history_page.dart';
 import 'features/settings/presentation/settings_page.dart';
+import 'features/call/presentation/call_page.dart';
 
 void main() {
   runApp(
@@ -56,6 +57,7 @@ class _MainNavigationPageState extends State<MainNavigationPage> {
   final List<Widget> _pages = [
     const ScannerPage(),
     const HistoryPage(),
+    const CallPage(),
     const SettingsPage(),
   ];
   
@@ -85,6 +87,10 @@ class _MainNavigationPageState extends State<MainNavigationPage> {
           BottomNavigationBarItem(
             icon: Icon(Icons.history),
             label: 'History',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.video_call),
+            label: 'Call',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.settings),
